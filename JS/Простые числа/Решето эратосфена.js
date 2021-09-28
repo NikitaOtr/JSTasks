@@ -1,5 +1,5 @@
 'use strict';
-const getFibonachi = n => {
+const lineOfSimple = n => {
     const rez = [];
     const block = [];
 
@@ -14,4 +14,4 @@ const getFibonachi = n => {
     return rez;
 };
 
-console.log(getFibonachi(100));
+console.log(lineOfSimple(100));

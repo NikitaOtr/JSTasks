@@ -16,6 +16,7 @@ const leftBinarySearch = (arr, x) => {
 };
 console.log(leftBinarySearch([-1, 1, 2, 3, 3, 3, 3, 4, 5], 3));
 
+
 const rightBinarySearch = (arr, x) => {
     let left = 0;
     let right = arr.length - 1;

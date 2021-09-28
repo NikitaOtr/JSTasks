@@ -11,7 +11,6 @@ const score = dice => {
     const rez = counts.reduce((acc, count, ind) => {
         return acc + (Math.floor(count / 3) * threeValue[ind]) + (count % 3) * aloneValue[ind];
     }, 0);
-    console.log(rez);
     return rez;
 };
 

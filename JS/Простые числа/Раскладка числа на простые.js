@@ -6,9 +6,7 @@ const decomposeNumber = number => {
         if (number % prime === 0) {
             rez[prime] = rez[prime] + 1 || 1;
             number /= prime;
-        } else {
-            prime++;
-        }
+        } else { prime++; }
     }
     rez[number] = rez[number] + 1 || 1;
     return rez;

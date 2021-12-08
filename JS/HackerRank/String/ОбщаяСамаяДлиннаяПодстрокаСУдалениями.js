@@ -1,6 +1,6 @@
 'use strict';
 function LCSubStr(s1, s2) {
-    const cash = Array(s1.length + 1).fill().map(() => Array(s2.length + 1).fill(0));
+    const cash = Array(s1.length + 1).fill(Array(s2.length + 1).fill(0));
 
     for (let i = 1; i <= s1.length; i++) {
         for (let j = 1; j <= s2.length; j++) {
@@ -12,7 +12,6 @@ function LCSubStr(s1, s2) {
         }
     }
     return cash[s1.length][s2.length];
-
 }
 
-console.log(LCSubStr('HARRY', 'SALLY'));
+console.log(LCSubStr('HARRY', 'SALLYqqqqq'));

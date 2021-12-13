@@ -4,10 +4,8 @@ function minimumPasses(m, w, p, n) {
     let days = 0;
     let candies = 0;
     let answer = Math.ceil(n / (m * w));
-    console.log(answer);
 
     while (days < answer) {
-        console.log('candies', candies);
         if (p > candies) {
             const daysNeeded = Math.ceil((p - candies) / (m * w));
             candies += daysNeeded * m * w;

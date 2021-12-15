@@ -1,18 +1,18 @@
 'use strict';
 
-function firstNonRepeatingLetter(str) {
-    const letter = {};
+const firstUniqueLetter = str => {
+    const letters = {};
     for (const char of str) {
         const lowerChar = char.toLowerCase();
-        letter[lowerChar] = letter[lowerChar] + 1 || 1;
+        letters[lowerChar] = letters[lowerChar] + 1 || 1;
     }
     for (const char of str) {
         const lowerChar = char.toLowerCase();
-        if (letter[lowerChar] === 1) {
+        if (letters[lowerChar] === 1) {
             return char;
         }
     }
     return '';
+};
 
-}
-console.log(firstNonRepeatingLetter('moonmEn'));
+console.log(firstUniqueLetter('moonmEn'));

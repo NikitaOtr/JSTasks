@@ -8,15 +8,15 @@ function minTime(machines, goal) {
     let left = 0;
     let right = Math.max(...machines) * goal;
     while (left < right) {
-        const time = Math.trunc((left + right) / 2);
+        const middle = Math.trunc((left + right) / 2);
         let totalGoal = 0;
         for (const key of Object.keys(countMachines)) {
-            totalGoal += Math.trunc(time / key) * countMachines[key];
+            totalGoal += Math.trunc(middle / key) * countMachines[key];
         }
         if (goal > totalGoal) {
-            left = time + 1;
+            left = middle + 1;
         } else {
-            right = time;
+            right = middle;
         }
     }
     return left;

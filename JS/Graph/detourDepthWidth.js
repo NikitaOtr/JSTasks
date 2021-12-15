@@ -1,9 +1,11 @@
 'use strict';
 
 const used = Array(100).fill(false);
+const G = Array(100).fill().map(() => Array.fill(0));
+console.log(G);
 
-// обход в Ширину
-function bfs(G, s) {
+// обход в ширину
+const bfs = (G, s) => {
     const q = [s]; // очередь
     used[s] = true;
     while (q.length > 0) {
@@ -15,11 +17,10 @@ function bfs(G, s) {
             }
         }
     }
-}
-
+};
 
 // обхд в глубину
-function dfs(G, s) {
+const dfs = (G, s) => {
     const q = [s]; // стек
     used[s] = true;
     while (q.length > 0) {
@@ -31,4 +32,7 @@ function dfs(G, s) {
             }
         }
     }
-}
+};
+
+dfs();
+bfs();

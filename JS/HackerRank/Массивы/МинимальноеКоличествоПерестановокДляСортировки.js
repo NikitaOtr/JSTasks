@@ -1,4 +1,5 @@
 'use strict';
+// все числа разные от 1 до n
 function minimumSwaps(arr) {
     let swap = 0;
     const tmp = {};

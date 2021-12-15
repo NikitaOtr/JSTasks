@@ -1,5 +1,5 @@
 'use strict';
-function LCSubStr(s1, s2) {
+function searchLongestSubstring(s1, s2) {
     const cash = Array(s1.length + 1).fill().map(() => Array(s2.length + 1).fill(0));
     let maxI = 0;
     let maxJ = 0;
@@ -20,6 +20,6 @@ function LCSubStr(s1, s2) {
 
 }
 
-console.log(LCSubStr('abdcd', 'dcweeabd'));
+console.log(searchLongestSubstring('abdcd', 'dcweeabd'));
 
 

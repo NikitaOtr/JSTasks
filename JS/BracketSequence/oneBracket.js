@@ -1,7 +1,7 @@
 /* eslint-disable brace-style */
 'use strict';
 // ()
-const validBrackets = brackets => {
+const isValidBrackets = brackets => {
     let value = 0;
     for (const bracket of brackets) {
         if (value < 0) { return false; }
@@ -11,4 +11,4 @@ const validBrackets = brackets => {
     return value === 0;
 };
 
-console.log(validBrackets('(()()(()))'));
+console.log(isValidBrackets('((14 * 45) + (56)(()))'));

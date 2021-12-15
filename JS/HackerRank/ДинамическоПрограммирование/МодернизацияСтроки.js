@@ -1,5 +1,5 @@
 'use strict';
-
+// wrong
 function abbreviation(a, b) {
     a = a.toLowerCase();
     b = b.toLowerCase();

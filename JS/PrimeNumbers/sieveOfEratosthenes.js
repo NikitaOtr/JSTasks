@@ -1,8 +1,11 @@
 'use strict';
-const lineOfSimple = n => {
+const lineOfPrimeNumbers = n => {
+    if (n < 2) {
+        return [];
+    }
+
     const rez = [];
     const block = [];
-
     for (let i = 2; i <= n; i++) {
         if (!block[i]) {
             rez.push(i);
@@ -14,4 +17,4 @@ const lineOfSimple = n => {
     return rez;
 };
 
-console.log(lineOfSimple(100));
+console.log(lineOfPrimeNumbers(100));

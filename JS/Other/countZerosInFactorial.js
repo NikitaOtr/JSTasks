@@ -1,6 +1,6 @@
 'use strict';
 
-const zeros = n => {
+const countZerosInFactorial = n => {
     let rez = 0;
     for (let i = 5; i < n; i *= 5) {
         rez += Math.floor(n / i);
@@ -8,4 +8,4 @@ const zeros = n => {
     return rez;
 };
 
-console.log(zeros(30));
+console.log(countZerosInFactorial(30));

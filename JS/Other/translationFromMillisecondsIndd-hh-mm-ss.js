@@ -1,6 +1,6 @@
 'use strict';
 
-const humanReadable = time => {
+const getCorrectTime = time => {
     const seconds = time % 60;
     const minutes = Math.floor(time / 60 % 60);
     const hours = Math.floor(time / 3600 % 24);
@@ -8,4 +8,4 @@ const humanReadable = time => {
     return [days, hours, minutes, seconds].map(item => (item < 10 ? '0' + item : item)).join(':');
 };
 
-console.log(humanReadable(21600 * 2 * 2 * 6 * 1.1));
+console.log(getCorrectTime(21600 * 2 * 2 * 6 * 1.1));

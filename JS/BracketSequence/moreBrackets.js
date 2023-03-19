@@ -1,13 +1,18 @@
-/* eslint-disable brace-style */
 'use strict';
 // () {} []
-const isValidBrackets = brackets => {
+const isValidBrackets = (brackets) => {
+    const openBrackets = ['(', '{', '['];
     const stack = [];
     for (const bracket of brackets) {
-        if (bracket === '(' || bracket === '{' || bracket === '[') { stack.push(bracket); }
-        else if (bracket === ')' && stack.pop() !== '(') { return false; }
-        else if (bracket === '}' && stack.pop() !== '{') { return false; }
-        else if (bracket === ']' && stack.pop() !== '[') { return false; }
+        if (openBrackets.includes(bracket)) {
+            stack.push(bracket);
+        } else if (bracket === ')' && stack.pop() !== '(') {
+            return false;
+        } else if (bracket === '}' && stack.pop() !== '{') {
+            return false;
+        } else if (bracket === ']' && stack.pop() !== '[') {
+            return false;
+        }
     }
     return stack.length === 0;
 };
